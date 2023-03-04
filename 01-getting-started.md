@@ -28,3 +28,7 @@ eksctl version
 aws-iam-authenticator help
 ```
 
+### Basic eksctl commands
+```bash
+eksctl get cluster
+```
