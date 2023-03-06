@@ -1,11 +1,9 @@
 # Getting started
-https://eksctl.io/
->eksctl is a simple CLI tool for creating and managing clusters on EKS - Amazon's managed Kubernetes service for EC2. It is written in Go, uses CloudFormation, was created by Weaveworks and it welcomes contributions from the community.
-
 
 ## Installing tools
 - [Getting started with Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html)
 - [Getting started with Amazon EKS – AWS Management Console and AWS CLI](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-console.html)
+
 ### Prerequisites
 - AWS CLI
 - `kubectl`
@@ -31,4 +29,15 @@ aws-iam-authenticator help
 ### Basic eksctl commands
 ```bash
 eksctl get cluster
+```
+
+## Utils
+Decode encoded messages
+```bash
+aws sts decode-authorization-message --encoded-message (encoded error message) --query DecodedMessage --output text | jq '.'
+```
+
+Install jq tool
+```bash
+brew install jq
 ```
