@@ -29,5 +29,5 @@ eksctl delete cluster clusterName
 
 ## Delete a nodegroup
 ```bash
-eksctl delete nodegroup
+eksctl delete ng -c clusterName NodeGroupName
 ```
