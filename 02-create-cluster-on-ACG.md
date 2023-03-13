@@ -3,7 +3,15 @@
 
 
 ```bash
-eksctl create cluster --name dev --region=us-east-1 --nodegroup-name standard-workers --node-type t3.medium --nodes 2 --nodes-min 1 --nodes-max 4 --managed
+eksctl create cluster \
+--name dev \
+--region=us-east-1 \
+--nodegroup-name dev-workers \
+--node-type t3.medium \
+--nodes 2 \
+--nodes-min 1 \
+--nodes-max 4 \
+--managed
 ```
 Result: sucessfully created cluster
 
