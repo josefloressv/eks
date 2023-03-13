@@ -4,10 +4,20 @@ kubectl cluster-info
 
 ## Config
 ```bash
+# contexts
 kubectl config get-contexts
 kubectl config current-context
 
 kubectl config use-context contextname
+kubectl config delete-context contextname
+
+# clusters
+kubectl config get-clusters
+kubectl config delete-cluster clusterName
+
+# users
+kubectl config get-users
+kubectl config delete-user userName
 ```
 
 Retrieve your Amazon EKS cluster connection details, saving them into the ~/.kube/config file
