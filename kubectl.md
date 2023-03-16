@@ -23,6 +23,7 @@ kubectl config delete-user userName
 Retrieve your Amazon EKS cluster connection details, saving them into the ~/.kube/config file
 ```bash
 aws eks update-kubeconfig --name clusterName --region us-east-1
+aws eks get-token --cluster-name dev
 ```
 
 ## Namespaces
