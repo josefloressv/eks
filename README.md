@@ -8,6 +8,7 @@ https://eksctl.io/
 - [Building a Cloud Native Application in EKS Lab](04-building-a-cloud-native-application-CA.md)
 - [eksctl useful commands](eksctl.md)
 - [kubectl useful commands](kubectl.md)
+- [aws CLI useful commands](aws-cli.md)
 
 # Troubleshooting links
 Resources that I have used to solve one or another problem:
