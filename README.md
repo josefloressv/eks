@@ -9,6 +9,7 @@ https://eksctl.io/
 - [eksctl useful commands](eksctl.md)
 - [kubectl useful commands](kubectl.md)
 - [aws CLI useful commands](aws-cli.md)
+- [Working with Storage](yaml/working-with-storage/README.md)
 
 # Troubleshooting links
 Resources that I have used to solve one or another problem:
