@@ -58,6 +58,7 @@ eksctl create iamserviceaccount \
 eksctl create addon --name aws-ebs-csi-driver --cluster $EKS_CLUSTER_NAME --service-account-role-arn "arn:aws:iam::$(aws sts get-caller-identity --query Account | jq -r):role/AmazonEKS_EBS_CSI_DriverRole" --force
 
 # Check
+# EKS > Clusters > Dev > Add-ons
 kubectl get pods -n kube-system
 ```
 
@@ -193,10 +194,10 @@ kubectl get svc api
 
 ```bash
 # Test and confirm that the API route URL /ok endpoint can be called successfully
-curl http://a9ff9d3e09c6e40f49e2654506036872-1576380877.us-east-1.elb.amazonaws.com/ok
+curl http://ac3929004af084e9a9c3f05733941b13-834388613.us-east-1.elb.amazonaws.com/ok
 
 # Test and confirm that the API route URL /languages, and /languages/{name} endpoints can be called successfully.
-API_ELB_PUBLIC_FQDN=a9ff9d3e09c6e40f49e2654506036872-1576380877.us-east-1.elb.amazonaws.com 
+API_ELB_PUBLIC_FQDN=ac3929004af084e9a9c3f05733941b13-834388613.us-east-1.elb.amazonaws.com 
 curl -s $API_ELB_PUBLIC_FQDN/languages | jq .
 curl -s $API_ELB_PUBLIC_FQDN/languages/go | jq .
 curl -s $API_ELB_PUBLIC_FQDN/languages/java | jq .
@@ -214,6 +215,7 @@ echo API_ELB_PUBLIC_FQDN=$API_ELB_PUBLIC_FQDN
 
 # Create the Frontend Deployment resource
 # note uses the API_ELB_PUBLIC_FQDN variable created above
+# Modify manual the yaml to include the API_ELB_PUBLIC_FQDN
 kubectl apply -f CA-vote-app/04-frontend/01-frontend-deployment.yaml
 
 # Check the resources
@@ -241,4 +243,9 @@ kubectl logs -l role=frontend --all-containers=true -f
 # Troubleshoot
 ```bash
 kubectl rollout restart deploy frontend
+```
+
+# Destroy the cluster
+```bash
+
 ```
