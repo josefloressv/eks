@@ -78,3 +78,23 @@ EKS cluster "dev" in "us-east-1" region is ready
 2023-03-05 12:04:14 [ℹ]  kubectl command should work with "/Users/joseflores/.kube/config", try 'kubectl get nodes'
 2023-03-05 12:04:14 [✔]  EKS cluster "dev" in "us-east-1" region is ready
 ```
+
+## Deploy Nginx image
+```bash
+# Deploy
+kubectl apply -f yaml/ACG-eks-basic/nginx-deployment.yam
+
+# Check
+kubectl get deployment -o wide
+kubectl get pods
+```
+
+
+## Expose the Service to Internet
+```bash
+# Deploy
+kubectl apply -f yaml/ACG-eks-basic/nginx-deployment.yam
+
+# Check
+kubectl get svc -o wide
+```
