@@ -1,4 +1,24 @@
-# Elastic Kubernetes Service (EKS)
+# EKS
+Elastic Kubernetes Service (EKS) PlayGround
+
+## Prerequisites
+
+1. Install AWS SDK
+2. Install kubectl
+3. Login to AWS
+
+```bash
+# Install AWS SDK
+brew install aws-cli
+
+# Install kubectl
+brew install kubernetes-cli
+
+# Login to AWS
+aws configure
+```
+
+## Create EKS cluser from CLI
 https://eksctl.io/
 >eksctl is a simple CLI tool for creating and managing clusters on EKS - Amazon's managed Kubernetes service for EC2. It is written in Go, uses CloudFormation, was created by Weaveworks and it welcomes contributions from the community.
 
